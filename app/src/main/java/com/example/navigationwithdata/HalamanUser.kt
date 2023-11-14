@@ -66,9 +66,5 @@ fun HalamanUser(
             onClick = onCancelButtonClicked) {
             Text(stringResource(R.string.cancel))
         }
-        Button(onClick = {onSubmitButtonClick(ListDataTxt)}) {
-            Text(text = stringResource(id = R.string.btn_next))
-
         }
     }
-}
