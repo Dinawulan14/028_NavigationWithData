@@ -17,7 +17,7 @@ import com.example.navigationwithdata.data.OrderUIState
 @Composable
 fun HalamanIsiUser(
     orderUIState: OrderUIState,
-    onClickBackButton: () -> Unit
+    onCancelButtonClick: () -> Unit
 ){
     Column(
         modifier = Modifier
@@ -36,7 +36,7 @@ fun HalamanIsiUser(
         Text(text = orderUIState.telepon)
         Divider()
         Spacer(modifier = Modifier.padding(16.dp))
-        Button(onClickBackButton){
+        Button(onCancelButtonClick){
             Text(text = stringResource(id = R.string.btn_back))
         }
     }
