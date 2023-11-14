@@ -62,7 +62,7 @@ fun HalamanUser(
             Text(text = "Telepon")
         })
         Spacer(modifier = Modifier.padding(16.dp))
-        OutlinedButton(
+        OutlinedButton(modifier = Modifier.weight(1f),
             onClick = onCancelButtonClicked){
             Text(stringResource(id = R.string.cancel))
         }
