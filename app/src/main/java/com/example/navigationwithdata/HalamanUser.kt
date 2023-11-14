@@ -27,7 +27,7 @@ import androidx.compose.ui.unit.dp
 fun HalamanUser(
     onSubmitButtonClick: (MutableList<String>) -> Unit,
     onCancelButtonClicked:() -> Unit,
-){
+) {
     var namaTxt by rememberSaveable {
         mutableStateOf("")
     }
@@ -45,13 +45,13 @@ fun HalamanUser(
         modifier = Modifier
             .padding(16.dp)
             .fillMaxSize()
-    ){
+    ) {
         OutlinedTextField(value = namaTxt, onValueChange = {
             namaTxt = it
         }, label = {
             Text(text = "Nama")
         })
-        OutlinedTextField(value = alamatTxt , onValueChange = {
+        OutlinedTextField(value = alamatTxt, onValueChange = {
             alamatTxt = it
         }, label = {
             Text(text = "Alamat")
@@ -62,9 +62,14 @@ fun HalamanUser(
             Text(text = "Telepon")
         })
         Spacer(modifier = Modifier.padding(16.dp))
-        OutlinedButton(modifier = Modifier.weight(1f),
-            onClick = onCancelButtonClicked) {
+        OutlinedButton(
+            modifier = Modifier.weight(1f),
+            onClick = onCancelButtonClicked
+        ) {
             Text(stringResource(R.string.cancel))
+        }
+        Button(onClick = { onSubmitButtonClick(ListDataTxt) }) {
+            Text(text = stringResource(id = R.string.btn_next));
         }
         }
     }
