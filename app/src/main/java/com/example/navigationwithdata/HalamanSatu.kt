@@ -40,7 +40,8 @@ fun HalamanSatu(
     modifier: Modifier = Modifier
 ) {
     var rasaYgDipilih by rememberSaveable { mutableStateOf("") }
-    var textJmBeli by remember { mutableStateOf("") }
+    var textJmBeli by remember { mutableStateOf("")
+    }
 
     Column(
         modifier = modifier,

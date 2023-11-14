@@ -4,7 +4,7 @@
     <string name="nama">Nama</string>
     <string name="alamat">Alamat</string>
     <string name="telepon">Telepon</string>
-    <string name="btn_submit">Submit</string>
+    <string name="btn_next">Next</string>
     <string name="btn_back">Back</string>
     <string name="confirm">Konfirmasi</string>
     <string name="next">Lanjut</string>

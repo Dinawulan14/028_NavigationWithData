@@ -9,6 +9,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Button
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -24,7 +25,8 @@ import androidx.compose.ui.unit.dp
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun HalamanUser(
-    onSubmitButtonClick: (MutableList<String>) -> Unit
+    onSubmitButtonClick: (MutableList<String>) -> Unit,
+    onCancelButtonClicked:() -> Unit,
 ){
     var namaTxt by rememberSaveable {
         mutableStateOf("")
@@ -60,8 +62,12 @@ fun HalamanUser(
             Text(text = "Telepon")
         })
         Spacer(modifier = Modifier.padding(16.dp))
+        OutlinedButton(modifier = Modifier.weight(1f),
+            onClick = onCancelButtonClicked) {
+            Text(stringResource(R.string.cancel))
+        }
         Button(onClick = {onSubmitButtonClick(ListDataTxt)}) {
-            Text(text = stringResource(id = R.string.btn_submit))
+            Text(text = stringResource(id = R.string.btn_next))
 
         }
     }
