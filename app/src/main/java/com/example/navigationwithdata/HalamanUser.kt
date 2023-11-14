@@ -25,7 +25,7 @@ import androidx.compose.ui.unit.dp
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun HalamanUser(
-    onSubmitButtonClick: (MutableList<String>) -> Unit,
+    onNextButtonClicked:() -> Unit,
     onCancelButtonClicked:() -> Unit,
 ) {
     var namaTxt by rememberSaveable {
@@ -63,13 +63,13 @@ fun HalamanUser(
         })
         Spacer(modifier = Modifier.padding(16.dp))
         OutlinedButton(
-            modifier = Modifier.weight(1f),
-            onClick = onCancelButtonClicked
-        ) {
-            Text(stringResource(R.string.cancel))
+            onClick = onCancelButtonClicked){
+            Text(stringResource(id = R.string.cancel))
         }
-        Button(onClick = { onSubmitButtonClick(ListDataTxt) }) {
-            Text(text = stringResource(id = R.string.btn_next));
+        Button(modifier = Modifier.weight(1f),
+            enabled = ListDataTxt.isNotEmpty(),
+            onClick = { onNextButtonClicked() }) {
+            Text(stringResource(id = R.string.btn_next));
         }
         }
     }
