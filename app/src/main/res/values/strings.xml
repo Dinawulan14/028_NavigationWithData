@@ -5,7 +5,7 @@
     <string name="alamat">Alamat</string>
     <string name="telepon">Telepon</string>
     <string name="btn_next">Next</string>
-    <string name="btn_back">Back</string>
+    <string name="btn_cancel">Batal</string>
     <string name="confirm">Konfirmasi</string>
     <string name="next">Lanjut</string>
     <string name="cancel">Batal</string>

@@ -60,7 +60,6 @@ fun EsJumboAppBar(
     )
 }
 
-@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun EsJumboApp(
     viewModel: OrderViewModel = viewModel(),
@@ -111,11 +110,10 @@ fun EsJumboApp(
                     })
             }
             composable(route = PengelolaHalaman.Summary.name) {
-                HalamanIsiUser(orderUIState = uiState,
-                    onCancelButtonClick = {
-                        navController.navigate(PengelolaHalaman.Formulir.name
-                        )
-                    })
+                HalamanDua(
+                    orderUIState = uiState,
+                    onCancelButtonClicked = { cancelOrderAndNavigateToRasa(navController) },
+                )
             }
         }
             }
