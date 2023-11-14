@@ -21,7 +21,7 @@ fun HalamanIsiUser(
 ){
     Column(
         modifier = Modifier
-            .padding(16.dp)
+            .padding(17.dp)
             .fillMaxSize()
     ){
         Text(text = "Nama")
