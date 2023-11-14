@@ -78,6 +78,7 @@ fun HalamanSatu(
                 .weight(1f, false),
                 horizontalArrangement = Arrangement.spacedBy(dimensionResource(R.dimen.padding_medium)),
                 ){
+
                 OutlinedTextField(value = textJmBeli,
                     singleLine = true,
                     shape = MaterialTheme.shapes.large,
