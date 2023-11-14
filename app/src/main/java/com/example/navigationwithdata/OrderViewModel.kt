@@ -45,4 +45,4 @@ class OrderViewModel : ViewModel() {
             )
         }
     }
-}
+};
