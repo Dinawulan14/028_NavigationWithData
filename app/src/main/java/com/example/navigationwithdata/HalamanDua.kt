@@ -4,7 +4,6 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
@@ -29,9 +28,7 @@ fun HalamanDua (
     modifier: Modifier = Modifier
 ) {
     val items = listOf(
-        Pair(stringResource(R.string.nama), orderUIState.nama),
-        Pair(stringResource(R.string.alamat), orderUIState.alamat),
-        Pair(stringResource(R.string.telepon), orderUIState.telepon),
+
         Pair(stringResource(R.string.quantity), orderUIState.jumlah),
         Pair(stringResource(R.string.flavors), orderUIState.rasa),
     )
@@ -40,6 +37,19 @@ fun HalamanDua (
         modifier = modifier,
         verticalArrangement = Arrangement.SpaceBetween
     ) {
+        Text(text = "Nama")
+        Text(text = orderUIState.nama)
+        Divider()
+        Spacer(modifier = Modifier.padding(16.dp))
+        Text(text = "Alamat")
+        Text(text = orderUIState.alamat)
+        Divider()
+        Spacer(modifier = Modifier.padding(16.dp))
+        Text(text = "Telepon")
+        Text(text = orderUIState.telepon)
+        Divider()
+        Spacer(modifier = Modifier.padding(16.dp))
+
         Column(
             modifier = Modifier.padding(dimensionResource(R.dimen.padding_medium)),
             verticalArrangement = Arrangement.spacedBy(
@@ -77,30 +87,9 @@ fun HalamanDua (
                     modifier = Modifier.fillMaxWidth(),
                     onClick = onCancelButtonClicked
                 ) {
-                    Column(
-                        modifier = Modifier
-                            .padding(16.dp)
-                            .fillMaxSize()
-                    ) {
-                        Text(text = "Nama")
-                        Text(text = orderUIState.nama)
-                        Divider()
-                        Spacer(modifier = Modifier.padding(16.dp))
-                        Text(text = "Alamat")
-                        Text(text = orderUIState.alamat)
-                        Divider()
-                        Spacer(modifier = Modifier.padding(16.dp))
-                        Text(text = "Telepon")
-                        Text(text = orderUIState.telepon)
-                        Divider()
-                        Spacer(modifier = Modifier.padding(16.dp))
-                        Button(onCancelButtonClicked) {
-                            Text(stringResource(R.string.cancel))
-                        }
-                    }
+                    Text(stringResource(R.string.cancel))
                 }
             }
         }
     }
 }
-
